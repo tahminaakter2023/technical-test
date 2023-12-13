@@ -1,0 +1,202 @@
+{
+	"info": {
+		"name": "Famouse Name API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+	},
+	"item": [
+		{
+			"name": "Get List of Famouse Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/famous-names",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"famous-names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Famouse Name By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/famous-names/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"famous-names",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Famous Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"John Doe\",\n    \"lat\":\"1.0009009\",\n    \"lng\":\"-5.9987878\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/famous-names",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"famous-names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Famouse Name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"John Doe test\",\n    \"lat\":\"-1.0009009\",\n    \"lng\":\"0.9987878\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/famous-names/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"famous-names",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "clientSecret",
+				"value": "oqqdi9jn85hj21p2bq64eod8sjintioa5jfdhf0h2ao75hq2vpc",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "499bolbo1mv3tdgjqtam3nrh8j",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://pam-dev.auth.eu-west-2.amazoncognito.com/oauth2/token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "Cognito-Bearer",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
